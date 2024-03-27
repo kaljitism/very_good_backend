@@ -1,5 +1,7 @@
 import 'package:dart_frog/dart_frog.dart';
 
-Response onRequest(RequestContext context) {
-  return Response(body: 'Welcome to Dart Frog!');
+Future<Response> onRequest(RequestContext context) async {
+  return Response.json(
+    body: {'message': 'Hello, World!'},
+  );
 }
